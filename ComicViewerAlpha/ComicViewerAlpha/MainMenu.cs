@@ -116,7 +116,17 @@ namespace ComicViewerAlpha
             about.Clicked += async (Sender, e) =>
             {
                 await Navigation.PushAsync(new Ver());
-            };      
+            };    
         }
+
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            base.OnSizeAllocated(width, height);
+            MainMenu.width = width;
+            MainMenu.height = height;
+
+        }
+        public static double width;
+        public static double height;
     }
 }

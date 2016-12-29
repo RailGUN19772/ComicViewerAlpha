@@ -12,11 +12,14 @@ namespace ComicViewerAlpha
     {
         public SelectFileListView()
         {
+            var width = MainMenu.width;
+            var height = MainMenu.height;
+
             var prologue = new Image
             {
                 //プロローグ
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var prologueGR = new TapGestureRecognizer();
             prologue.GestureRecognizers.Add(prologueGR);
@@ -24,8 +27,8 @@ namespace ComicViewerAlpha
             var welcomeKST = new Image
             {
                 //KSTへようこそ！
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var welcomeKSTGR = new TapGestureRecognizer();
             welcomeKST.GestureRecognizers.Add(welcomeKSTGR);
@@ -33,8 +36,8 @@ namespace ComicViewerAlpha
             var jouhou = new Image
             {
                 //情報工学科
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var jouhouGR = new TapGestureRecognizer();
             jouhou.GestureRecognizers.Add(jouhouGR);
@@ -42,8 +45,8 @@ namespace ComicViewerAlpha
             var electronics = new Image
             {
                 //総合電機科
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var electronicsGR = new TapGestureRecognizer();
             electronics.GestureRecognizers.Add(electronicsGR);
@@ -51,8 +54,8 @@ namespace ComicViewerAlpha
             var mechatronics = new Image
             {
                 //電子機械科
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var mechatronicsGR = new TapGestureRecognizer();
             mechatronics.GestureRecognizers.Add(mechatronicsGR);
@@ -60,8 +63,8 @@ namespace ComicViewerAlpha
             var kensetsu = new Image
             {
                 //建設工学科
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var kensetsuGR = new TapGestureRecognizer();
             kensetsu.GestureRecognizers.Add(kensetsuGR);
@@ -69,8 +72,8 @@ namespace ComicViewerAlpha
             var design = new Image
             {
                 //デザイン科
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var designGR = new TapGestureRecognizer();
             design.GestureRecognizers.Add(designGR);
@@ -78,8 +81,8 @@ namespace ComicViewerAlpha
             var science = new Image
             {
                 //科学科
-                HeightRequest = 30,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileListView.ListView.png"),
+                WidthRequest = width * 0.5,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
             var scienceGR = new TapGestureRecognizer();
             science.GestureRecognizers.Add(scienceGR);

@@ -13,12 +13,14 @@ namespace ComicViewerAlpha
     {
         public SelectFileBlockView()
         {
+            var width = MainMenu.width;
+            var height = MainMenu.height;
+
             var prologue = new Image
             {
                 //プロローグ
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var prologueGR = new TapGestureRecognizer();
             prologue.GestureRecognizers.Add(prologueGR);
@@ -26,9 +28,8 @@ namespace ComicViewerAlpha
             var welcomeKST = new Image
             {
                 //KSTへようこそ！
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var welcomeKSTGR = new TapGestureRecognizer();
             welcomeKST.GestureRecognizers.Add(welcomeKSTGR);
@@ -36,9 +37,8 @@ namespace ComicViewerAlpha
             var jouhou = new Image
             {
                 //情報工学科
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var jouhouGR = new TapGestureRecognizer();
             jouhou.GestureRecognizers.Add(jouhouGR);
@@ -46,9 +46,8 @@ namespace ComicViewerAlpha
             var electronics = new Image
             {
                 //総合電機科
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var electronicsGR = new TapGestureRecognizer();
             electronics.GestureRecognizers.Add(electronicsGR);
@@ -56,9 +55,8 @@ namespace ComicViewerAlpha
             var mechatronics = new Image
             {
                 //電子機械科
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var mechatronicsGR = new TapGestureRecognizer();
             mechatronics.GestureRecognizers.Add(mechatronicsGR);
@@ -66,9 +64,8 @@ namespace ComicViewerAlpha
             var kensetsu = new Image
             {
                 //建設工学科
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var kensetsuGR = new TapGestureRecognizer();
             kensetsu.GestureRecognizers.Add(kensetsuGR);
@@ -76,9 +73,8 @@ namespace ComicViewerAlpha
             var design = new Image
             {
                 //デザイン科
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var designGR = new TapGestureRecognizer();
             design.GestureRecognizers.Add(designGR);
@@ -86,9 +82,8 @@ namespace ComicViewerAlpha
             var science = new Image
             {
                 //科学科
-                HeightRequest = 60,
-                WidthRequest = 100,
-                Source = ImageSource.FromResource("ComicViewer.Image.SelectFileBoxView.test.png"),
+                WidthRequest = width * 0.4,
+                Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileBoxView.test.png"),
             };
             var scienceGR = new TapGestureRecognizer();
             science.GestureRecognizers.Add(scienceGR);
@@ -103,23 +98,11 @@ namespace ComicViewerAlpha
                 VerticalOptions = LayoutOptions.Center,
                 HorizontalOptions = LayoutOptions.Center,
                 Orientation = StackOrientation.Horizontal,
-                //HeightRequest = 60,
-                //WidthRequest = 100,
-                Spacing = 30,
+                
+                Spacing = 10,
                 Children =
                 {
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     prologue,
-
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     welcomeKST,
                 }
             };
@@ -127,21 +110,10 @@ namespace ComicViewerAlpha
             {
                 VerticalOptions = LayoutOptions.Center,
                 Orientation = StackOrientation.Horizontal,
-                Spacing = 30,
+                Spacing = 10,
                 Children =
                 {
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     jouhou,
-
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     electronics,
                 }
             };
@@ -149,21 +121,10 @@ namespace ComicViewerAlpha
             {
                 VerticalOptions = LayoutOptions.Center,
                 Orientation = StackOrientation.Horizontal,
-                Spacing = 30,
+                Spacing = 10,
                 Children =
                 {
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     mechatronics,
-
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     kensetsu,
                 }
             };
@@ -171,25 +132,14 @@ namespace ComicViewerAlpha
             {
                 VerticalOptions = LayoutOptions.Center,
                 Orientation = StackOrientation.Horizontal,
-                Spacing = 30,
+                Spacing = 10,
                 Children =
                 {
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     design,
-
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "",
-                    },
                     science,
                 }
             };
-            
+
             StackLayout stackLayout = new StackLayout
             {
                 VerticalOptions = LayoutOptions.Center,
@@ -209,7 +159,8 @@ namespace ComicViewerAlpha
             Content = new ScrollView
             {
                 Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
-                VerticalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center,
                 Content = stackLayout,
             };
 

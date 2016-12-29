@@ -22,7 +22,7 @@ namespace ComicViewerAlpha
             foreach (var s in files)
                 stackLayout.Children.Add(new Image
                 {
-                    Source = ImageSource.FromResource($"ComicViewer.EpisodeImage.{episodeName}.{s}")
+                    Source = ImageSource.FromResource($"ComicViewerAlpha.EpisodeImage.{episodeName}.{s}")
                 });
 
             Content = new ScrollView
