@@ -15,12 +15,13 @@ namespace ComicViewerAlpha
             var width = MainMenu.width;
             var height = MainMenu.height;
 
-            var prologue = new Image
+            /*var prologue = new Image
             {
                 //プロローグ
                 WidthRequest = width * 0.5,
                 Source = ImageSource.FromResource("ComicViewerAlpha.Image.SelectFileListView.ListView.png"),
             };
+
             var prologueGR = new TapGestureRecognizer();
             prologue.GestureRecognizers.Add(prologueGR);
 
@@ -86,17 +87,57 @@ namespace ComicViewerAlpha
             };
             var scienceGR = new TapGestureRecognizer();
             science.GestureRecognizers.Add(scienceGR);
+            */
 
-            BackgroundImage = "KST.JPG";
+            var prologue = new Button
+            {
+                Text = "プロローグ"
+            };
+            var welcomeKST = new Button
+            {
+                Text = "KSTへようこそ！"
+            };
+            var jouhou = new Button
+            {
+                Text = "情報工学科"
+            };
+            var electronics = new Button
+            {
+                Text = "総合電機科"
+            };
+            var mechatronics = new Button
+            {
+                Text = "電子機械化"
+            };
+            var kensetsu = new Button
+            {
+                Text = "建設工学科"
+            };
+            var design = new Button
+            {
+                Text = "デザイン科"
+            };
+            var science = new Button
+            {
+                Text = "科学科"
+            };
+
+            //BackgroundImage = "KST.JPG";
             //Android:AndroidResourceとしてResources/drawableに追加
             //iOS:Resourcesにリンクとして追加
             //UWP:プロジェクト直下にリンクとして追加
 
             StackLayout stackLayout = new StackLayout
             {
-                Spacing = 10,
+                Spacing = 20,
+                
                 Children =
-                {
+                {   new Label
+                    {
+                        HorizontalTextAlignment= TextAlignment.Center,
+                        Text = "現在、プロローグとデザイン科を読むことができます。"
+                    },
+
                     prologue,
                     welcomeKST,
                     jouhou,
@@ -110,71 +151,78 @@ namespace ComicViewerAlpha
 
             Content = new ScrollView
             {
-                Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
-                HorizontalOptions = LayoutOptions.Start,
-                VerticalOptions = LayoutOptions.End,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
                 Content = stackLayout,
             };
 
-            prologueGR.Tapped += async (sender, e) =>
+            //prologueGR.Tapped += async (sender, e) =>
+            prologue.Clicked += async (sender, e) =>
             {
-                await Navigation.PushAsync(new EpisodePage("Episode1", new[]
+                await Navigation.PushAsync(new EpisodePage("prolouge", new[]
                 {
-                    "Screenshot.png",
-                    "Screenshot.png"
+                    "page1.png",
+                    "page2.png",
+                    "page3.png",
+                    "page4.png",
+                    "page5.png",
+                    "page6.png",
+                    "page7.png",
+                    "page8.png",
                 }));
             };
 
-            welcomeKSTGR.Tapped += async (sender, e) =>
+            welcomeKST.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new EpisodePage("Episode1", new[]
                 {
-                    "Screenshot.png",
+                    "andmore.png"
                 }));
             };
-            jouhouGR.Tapped += async (sender, e) =>
+            jouhou.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new EpisodePage("Episode1", new[]
                 {
-                    "Screenshot.png",
-                    "Screenshot.png",
+                    "andmore.png"
                 }));
             };
-            electronicsGR.Tapped += async (sender, e) =>
+            electronics.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new EpisodePage("Episode1", new[]
                 {
-                    "Screenshot.png",
+                    "andmore.png"
                 }));
             };
-            mechatronicsGR.Tapped += async (sender, e) =>
+            mechatronics.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new EpisodePage("Episode1", new[]
                 {
-                    "Screenshot.png",
-                    "Screenshot.png",
+                    "andmore.png"
                 }));
             };
-            kensetsuGR.Tapped += async (sender, e) =>
+            kensetsu.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new EpisodePage("Episode1", new[]
                 {
-                    "Screenshot.png",
+                    "andmore.png"
                 }));
             };
-            designGR.Tapped += async (sender, e) =>
+            design.Clicked += async (sender, e) =>
             {
-                await Navigation.PushAsync(new EpisodePage("Episode1", new[]
+                await Navigation.PushAsync(new EpisodePage("design", new[]
                 {
-                    "Screenshot.png",
-                    "Screenshot.png",
+                    "page1.png",
+                    "page2.png",
+                    "page3.png",
+                    "page4.png",
+                    "page5.png",
                 }));
             };
-            scienceGR.Tapped += async (sender, e) =>
+            science.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new EpisodePage("Episode1", new[]
                 {
-                    "Screenshot.png",
+                    "andmore.png"
                 }));
             };
         }

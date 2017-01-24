@@ -65,14 +65,13 @@ namespace ComicViewerAlpha
                     },
                 },
             };
-            BackgroundImage = "KST.JPG";
+            //BackgroundImage = "KST.JPG";
             //Android:AndroidResourceとしてResources/drawableに追加
             //iOS:Resourcesにリンクとして追加
             //UWP:プロジェクト直下にリンクとして追加
 
             Content = new StackLayout
             {
-                Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
                 VerticalOptions = LayoutOptions.Center,
                 Spacing = 50,
                 Children =
@@ -100,10 +99,10 @@ namespace ComicViewerAlpha
                     {
                         await Navigation.PushAsync(new SelectFileListView());
                     }
-                    else if(layoutView == "Block")
+                    /*else if(layoutView == "Block")
                     {
                         await Navigation.PushAsync(new SelectFileBlockView());
-                    }
+                    }*/
                 }
 
             };

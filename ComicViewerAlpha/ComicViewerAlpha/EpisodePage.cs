@@ -22,14 +22,15 @@ namespace ComicViewerAlpha
             foreach (var s in files)
                 stackLayout.Children.Add(new Image
                 {
+                    //Aspect = Aspect.AspectFill,
                     Source = ImageSource.FromResource($"ComicViewerAlpha.EpisodeImage.{episodeName}.{s}")
                 });
 
             Content = new ScrollView
             {
-                Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
                 BackgroundColor = Color.White,
                 VerticalOptions = LayoutOptions.FillAndExpand,
+                
                 Content = stackLayout,
             };
         }

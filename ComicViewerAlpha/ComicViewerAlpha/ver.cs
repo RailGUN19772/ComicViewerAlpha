@@ -26,20 +26,23 @@ namespace ComicViewerAlpha
             StackLayout stackLayout = new StackLayout
             {
                 Spacing = 30,
-                Children = {
+                Children =
+                {
                     new Label
-                    { Text = "このアプリについて\n" + ver1_0 + ver1_1 + ver1_2 },
+                    { TextColor = Color.White, Text = "このアプリについて\n" + ver1_0 + ver1_1 + ver1_2 },
                     new Label
-                    { Text = "動作確認端末及び環境\n"+
+                    {
+                        TextColor = Color.White,
+                        Text = "動作確認端末及び環境\n"+
                              "SONY XPERIA Z5 Android6.0\n"+
                              "HUAWEI Media PAD 7 Lite Android4.0.3\n"+
-                             "\nWindows10 AnniversaryUpdate"}
+                             "\nWindows10 AnniversaryUpdate"
+                    }
                 }
             };
 
             Content = new ScrollView
             {
-                Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
                 BackgroundColor = Color.Black,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 Content = stackLayout,

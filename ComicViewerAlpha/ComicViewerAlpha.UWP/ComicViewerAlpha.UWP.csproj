@@ -108,9 +108,7 @@
     <None Include="ComicViewerAlpha_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\..\..\..\..\Desktop\KST.JPG">
-      <Link>KST.JPG</Link>
-    </Content>
+    <Content Include="KST.JPG" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

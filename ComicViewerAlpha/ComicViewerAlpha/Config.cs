@@ -28,7 +28,6 @@ namespace ComicViewerAlpha
 
             Content = new StackLayout
             {
-                Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0),
                 Children =
                 {
                     new Label
@@ -36,7 +35,7 @@ namespace ComicViewerAlpha
                         Text = "エピソード表示の変更"
                     },
                     viewMode,
-                    buttonConfig,
+                    //buttonConfig,
                 },
             };
 
