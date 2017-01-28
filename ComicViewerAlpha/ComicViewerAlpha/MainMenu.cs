@@ -15,18 +15,18 @@ namespace ComicViewerAlpha
         {
             var selectFile = new Button
             {
-                Text = "Select the File",
+                Text = "話を選ぶ",
                 HeightRequest = 100,
             };
 
             var config = new Button
             {
-                Text = "Config"
+                Text = "設定"
             };
 
             var about = new Button
             {
-                Text = "About"
+                Text = "このアプリについて"
             };
 
             var content1 = new StackLayout
@@ -61,7 +61,7 @@ namespace ComicViewerAlpha
                     {
                         HorizontalTextAlignment = TextAlignment.End,
                         VerticalTextAlignment = TextAlignment.End,
-                        Text = "Ver 1.2"
+                        Text = "Ver 1.4"
                     },
                 },
             };
@@ -76,6 +76,13 @@ namespace ComicViewerAlpha
                 Spacing = 50,
                 Children =
                 {
+                    new Label
+                    {
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        VerticalTextAlignment = TextAlignment.Start,
+                        FontSize = 40,
+                        Text = "ＫＳＴへようこそ！"
+                    },
                     content1,
                     content2,
                     ver,

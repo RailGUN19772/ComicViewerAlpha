@@ -107,7 +107,7 @@ namespace ComicViewerAlpha
             };
             var mechatronics = new Button
             {
-                Text = "電子機械化"
+                Text = "電子機械科"
             };
             var kensetsu = new Button
             {
@@ -135,7 +135,8 @@ namespace ComicViewerAlpha
                 {   new Label
                     {
                         HorizontalTextAlignment= TextAlignment.Center,
-                        Text = "現在、プロローグとデザイン科を読むことができます。"
+                        FontSize = 25,
+                        Text = "現在、「プロローグ」と「デザイン科」と「科学科」\nを読むことができます。"
                     },
 
                     prologue,
@@ -220,9 +221,13 @@ namespace ComicViewerAlpha
             };
             science.Clicked += async (sender, e) =>
             {
-                await Navigation.PushAsync(new EpisodePage("Episode1", new[]
+                await Navigation.PushAsync(new EpisodePage("science", new[]
                 {
-                    "andmore.png"
+                    "page1.png",
+                    "page2.png",
+                    "page3.png",
+                    "page4.png",
+                    "page5.png",
                 }));
             };
         }

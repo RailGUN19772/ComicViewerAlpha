@@ -12,7 +12,9 @@ namespace ComicViewerAlpha
     {
         public EpisodePage(string episodeName,string[] files)
         {
-                                    
+
+            var width = MainMenu.width;
+
             StackLayout stackLayout = new StackLayout
             {
                 Spacing = 0,
@@ -22,7 +24,7 @@ namespace ComicViewerAlpha
             foreach (var s in files)
                 stackLayout.Children.Add(new Image
                 {
-                    //Aspect = Aspect.AspectFill,
+                    Aspect = Aspect.AspectFill,
                     Source = ImageSource.FromResource($"ComicViewerAlpha.EpisodeImage.{episodeName}.{s}")
                 });
 
